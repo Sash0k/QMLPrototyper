@@ -4,17 +4,17 @@
 <context>
     <name>AboutPage</name>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="63"/>
+        <location filename="../qml/pages/AboutPage.qml" line="60"/>
         <source>About Application</source>
         <translation>About Application</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="73"/>
+        <location filename="../qml/pages/AboutPage.qml" line="70"/>
         <source>&lt;b&gt;QML прототип (версия 0.4)&lt;/b&gt;&lt;br&gt;&lt;br&gt;Приложение предназначено для прототипирования QML интерфейсов (страниц и компонентов) прямо на устройстве под управлением ОС Аврора.&lt;br&gt;&lt;br&gt;Рабочий каталог приложения - Документы/QML прототипы/.&lt;br&gt;&lt;br&gt;&lt;i&gt;Рекомендация - для корректного отображения созданных в приложении страниц обязательно используйте в компоненте Page свойство background.color (например, backgroundColor: Theme.overlayBackgroundColor).&lt;/i&gt;&lt;br&gt;&lt;br&gt;Для вставки шаблонов кода - до нажатия на кнопку + в правой части экрана установите курсор в нужное для вставки место кода, далее при помощи кнопки + вставьте нужный шаблон элемента в код. &lt;br&gt;&lt;br&gt;Приложение создано в Аврора IDE 4.0.2.249-base, протестировано на планшете F+ LifeTab+ под управлением Аврора 4.0.2.303, смартфоне F+ R570E под управлением Аврора 5.0.1.22&lt;br&gt;&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="88"/>
+        <location filename="../qml/pages/AboutPage.qml" line="85"/>
         <source>Разрешается повторное распространение и использование как в виде исходного кода, так и в двоичной форме, с изменениями или без, при соблюдении следующих условий:&lt;br&gt;&lt;br&gt;
 
                            1) При повторном распространении исходного кода должно оставаться указанное выше уведомление об авторском праве, этот список условий и последующий отказ от гарантий.&lt;br&gt;&lt;br&gt;
@@ -27,9 +27,27 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="78"/>
+        <location filename="../qml/pages/AboutPage.qml" line="75"/>
         <source>3-Clause BSD License</source>
         <translation>3-Clause BSD License</translation>
+    </message>
+</context>
+<context>
+    <name>CCodeArea</name>
+    <message>
+        <location filename="../qml/pages/components/CCodeArea.qml" line="442"/>
+        <source>Undo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/components/CCodeArea.qml" line="443"/>
+        <source>Redo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/components/CCodeArea.qml" line="444"/>
+        <source>Paste</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -61,17 +79,17 @@
 <context>
     <name>QMLEditPage</name>
     <message>
-        <location filename="../qml/pages/QMLEditPage.qml" line="335"/>
+        <location filename="../qml/pages/QMLEditPage.qml" line="346"/>
         <source>Редактор QML страниц</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/QMLEditPage.qml" line="340"/>
+        <location filename="../qml/pages/QMLEditPage.qml" line="351"/>
         <source>Редактор QML компонентов</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/QMLEditPage.qml" line="350"/>
+        <location filename="../qml/pages/QMLEditPage.qml" line="361"/>
         <source>О приложении</source>
         <translation type="unfinished"></translation>
     </message>

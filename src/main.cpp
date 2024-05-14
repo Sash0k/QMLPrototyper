@@ -48,6 +48,8 @@
 #include <QScreen>
 #include <QtCore/qmath.h>
 
+#include "SyntaxHighlighter.h"
+
 //region Для реализации вывода qDebug в файл использован сторонний код (источник - https://stacktuts.com/how-to-redirect-qdebug-qwarning-qcritical-etc-output-in-c )
 
 void qdebugMessageOutputToFile(QtMsgType type, const QMessageLogContext& context, const QString& msg)
@@ -119,6 +121,9 @@ int main(int argc, char *argv[])
     qDebug() << "Физический размер экрана устройства: "+QString::number(screen_diagonal); //для R570E получилось 5.51097
 
     //КОНЕЦ СЕКЦИИ ПОЛУЧЕНИЯ РАЗМЕРА ДИАГОНАЛИ ЭКРАНА УСТРОЙСТВА АВРОРА
+
+    qmlRegisterType<SyntaxHighlighter>("SyntaxHighlighter", 1, 1, "SyntaxHighlighter");
+
 
     if (screen_diagonal<7) {
     view->setSource(Aurora::Application::pathTo(QStringLiteral("qml/QmlPrototyper.qml")));

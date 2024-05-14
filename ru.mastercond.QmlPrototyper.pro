@@ -46,15 +46,15 @@ PKGCONFIG += \
 SOURCES += \
     src/main.cpp \
     src/prototyper.cpp \
+    src/SyntaxHighlighter.cpp \
+    src/QMLHighlighter.cpp \
 
 HEADERS += \
-    src/prototyper.h
+    src/prototyper.h \
+    src/SyntaxHighlighter.h \
+    src/QMLHighlighter.h \
 
 DISTFILES += \
-    qml/pages/EditSourceCodeToPaste.qml \
-    qml/pages/QMLEditComponents.qml \
-    qml/pages/QMLViewComponent.qml \
-    qml/pages/Settings.qml \
     rpm/ru.mastercond.QmlPrototyper.spec \
     AUTHORS.md \
     CODE_OF_CONDUCT.md \
@@ -69,3 +69,6 @@ CONFIG += auroraapp_i18n qml_debug declarative_debug testlib
 TRANSLATIONS += \
     translations/ru.mastercond.QmlPrototyper.ts \
     translations/ru.mastercond.QmlPrototyper-ru.ts \
+
+RESOURCES += \
+    resources.qrc

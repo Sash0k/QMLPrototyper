@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>syntax/javascript.txt</file>
+        <file>syntax/keywords.txt</file>
+        <file>syntax/properties.txt</file>
+        <file>syntax/qml.txt</file>
+    </qresource>
+</RCC>
