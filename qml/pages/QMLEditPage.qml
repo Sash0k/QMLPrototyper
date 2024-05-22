@@ -466,6 +466,19 @@ Page {
           }
 
 
+            TextArea {
+                 id: codearea
+                 width: parent.width
+                 height: flickable.height/3*2
+                 textTopMargin: Theme.horizontalPageMargin
+                 focus: true
+                 clip: true
+                 label: "QML-код"
+                 placeholderText: "Код QML-страницы\n\nНажмите на \"+\" и сначала добавьте код Page" //текст, который пропадет при начале ввода текста
+                 wrapMode: Text.WordWrap
+                 placeholderAnimationEnabled: true
+             }
+            /*
             CCodeArea {
                 id: codearea
                 width: parent.width
@@ -480,7 +493,7 @@ Page {
                 //}
 
                 indentSize: 2 // TODO: на что влияет?
-            }
+            }*/
 
     ComboBox {
         id: fontsizeComboBox
