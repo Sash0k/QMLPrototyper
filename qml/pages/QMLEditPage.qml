@@ -41,20 +41,12 @@ import Sailfish.Pickers 1.0
 import ru.mastercond.QmlPrototyper 1.0
 
 import "components"
-import "palettes"
 
 Page {
     id:pagepage
     objectName: "mainPage"
     allowedOrientations: Orientation.All
     backgroundColor: Theme.overlayBackgroundColor
-
-    // Palettes
-    PaletteLoader {
-        id: paletteLoader
-        name: settings.palette
-    }
-    property alias palette: paletteLoader.palette
 
 
     property string selectedQMLFile
@@ -477,22 +469,6 @@ Page {
                  placeholderText: "Код QML-страницы\n\nНажмите на \"+\" и сначала добавьте код Page" //текст, который пропадет при начале ввода текста
                  wrapMode: Text.WordWrap
              }
-            /*
-            CCodeArea {
-                id: codearea
-                width: parent.width
-                height: flickable.height/3*2
-                focus: true
-                clip: true
-                //wrapMode: Text.WordWrap
-
-                // TODO:
-                //Component.onDestruction: {
-                //    ProjectManager.saveFileContent(text)
-                //}
-
-                indentSize: 2 // TODO: на что влияет?
-            }*/
 
     ComboBox {
         id: fontsizeComboBox

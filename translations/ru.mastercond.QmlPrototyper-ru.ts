@@ -33,24 +33,6 @@
     </message>
 </context>
 <context>
-    <name>CCodeArea</name>
-    <message>
-        <location filename="../qml/pages/components/CCodeArea.qml" line="442"/>
-        <source>Undo</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/components/CCodeArea.qml" line="443"/>
-        <source>Redo</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/components/CCodeArea.qml" line="444"/>
-        <source>Paste</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>DefaultCoverPage</name>
     <message>
         <location filename="../qml/cover/DefaultCoverPage.qml" line="46"/>
@@ -61,17 +43,17 @@
 <context>
     <name>QMLEditComponents</name>
     <message>
-        <location filename="../qml/pages/QMLEditComponents.qml" line="442"/>
+        <location filename="../qml/pages/QMLEditComponents.qml" line="444"/>
         <source>Редактор QML страниц</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/QMLEditComponents.qml" line="447"/>
+        <location filename="../qml/pages/QMLEditComponents.qml" line="449"/>
         <source>Редактор QML компонентов</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/QMLEditComponents.qml" line="457"/>
+        <location filename="../qml/pages/QMLEditComponents.qml" line="459"/>
         <source>О приложении</source>
         <translation type="unfinished"></translation>
     </message>
@@ -79,17 +61,17 @@
 <context>
     <name>QMLEditPage</name>
     <message>
-        <location filename="../qml/pages/QMLEditPage.qml" line="346"/>
+        <location filename="../qml/pages/QMLEditPage.qml" line="338"/>
         <source>Редактор QML страниц</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/QMLEditPage.qml" line="351"/>
+        <location filename="../qml/pages/QMLEditPage.qml" line="343"/>
         <source>Редактор QML компонентов</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/QMLEditPage.qml" line="361"/>
+        <location filename="../qml/pages/QMLEditPage.qml" line="353"/>
         <source>О приложении</source>
         <translation type="unfinished"></translation>
     </message>

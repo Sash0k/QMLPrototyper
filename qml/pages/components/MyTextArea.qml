@@ -69,7 +69,7 @@ MyTextBase {
         width: textArea.width - Theme.paddingSmall - textArea.textLeftMargin - textArea.textRightMargin
         focus: true
         activeFocusOnPress: false
-        color: textArea.color
+        color: Theme.primaryColor//textArea.color
         selectionColor: Theme.highlightColor
         selectedTextColor: Theme.highlightText
         font: textArea.font
@@ -88,16 +88,16 @@ MyTextBase {
         SyntaxHighlighter {
             id: syntaxHighlighter
 
-            normalColor: palette.editorNormal
-            commentColor: palette.editorComment
-            numberColor: palette.editorNumber
-            stringColor: palette.editorString
-            operatorColor: palette.editorOperator
-            keywordColor: palette.editorKeyword
-            builtInColor: palette.editorBuiltIn
-            markerColor: palette.editorMarker
-            itemColor: palette.editorItem
-            propertyColor: palette.editorProperty
+            normalColor: Theme.primaryColor
+            operatorColor: Theme.primaryColor
+            numberColor: Theme.primaryColor
+            commentColor: Theme.secondaryColor
+            itemColor: Theme.highlightColor
+            keywordColor: Theme.secondaryHighlightColor
+            propertyColor: Theme.secondaryHighlightColor
+            stringColor: Theme.errorColor
+            //builtInColor:
+            //markerColor:
         }
 
         Component.onCompleted: {

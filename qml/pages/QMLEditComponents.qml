@@ -40,6 +40,8 @@ import Sailfish.Silica 1.0
 import Sailfish.Pickers 1.0
 import ru.mastercond.QmlPrototyper 1.0
 
+import "components"
+
 Page {
     id:pagepage
     objectName: "mainPage"
@@ -563,7 +565,7 @@ Page {
 
 
 
-    TextArea {
+    MyTextArea {
         id: codearea
         width: parent.width
         height: flickable.height/3*2
@@ -573,7 +575,6 @@ Page {
         label: "QML-код"
         placeholderText: "Код QML-компонента \n\nКод компонента будет запущен внутри страницы\nPage {SilicaFlicable { Column...}}}\n\nНажмите на \"+\" и добавьте шаблон кода компонента" //текст, который пропадет при начале ввода текста
         wrapMode: Text.WordWrap
-        placeholderAnimationEnabled: true
     }
 
     ComboBox {
