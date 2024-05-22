@@ -34,6 +34,7 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import SyntaxHighlighter 1.1
 
 MyTextBase {
     id: textArea
@@ -82,6 +83,25 @@ MyTextBase {
         // Note: need to disable if textFormat is ever allowed to be more than TextEdit.PlainText
         Text {
             id: preeditText
+        }
+
+        SyntaxHighlighter {
+            id: syntaxHighlighter
+
+            normalColor: palette.editorNormal
+            commentColor: palette.editorComment
+            numberColor: palette.editorNumber
+            stringColor: palette.editorString
+            operatorColor: palette.editorOperator
+            keywordColor: palette.editorKeyword
+            builtInColor: palette.editorBuiltIn
+            markerColor: palette.editorMarker
+            itemColor: palette.editorItem
+            propertyColor: palette.editorProperty
+        }
+
+        Component.onCompleted: {
+            syntaxHighlighter.setHighlighter(textEdit)
         }
     }
 }
