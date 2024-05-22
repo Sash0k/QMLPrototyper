@@ -466,7 +466,7 @@ Page {
           }
 
 
-            TextArea {
+            MyTextArea {
                  id: codearea
                  width: parent.width
                  height: flickable.height/3*2
@@ -476,7 +476,6 @@ Page {
                  label: "QML-код"
                  placeholderText: "Код QML-страницы\n\nНажмите на \"+\" и сначала добавьте код Page" //текст, который пропадет при начале ввода текста
                  wrapMode: Text.WordWrap
-                 placeholderAnimationEnabled: true
              }
             /*
             CCodeArea {

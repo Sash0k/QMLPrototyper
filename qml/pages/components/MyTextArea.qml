@@ -34,13 +34,11 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
-import Sailfish.Silica.private 1.0
-import "private"
 
-TextBase {
+MyTextBase {
     id: textArea
 
-    property alias text: preeditText.text
+    property alias text: textEdit.text
     property alias textWidth: textEdit.width
     property alias readOnly: textEdit.readOnly
     property alias inputMethodHints: textEdit.inputMethodHints
@@ -51,19 +49,6 @@ TextBase {
     property alias selectedText: textEdit.selectedText
     property alias selectionStart: textEdit.selectionStart
     property alias selectionEnd: textEdit.selectionEnd
-
-    onHorizontalAlignmentChanged: {
-        if (explicitHorizontalAlignment) {
-            textEdit.horizontalAlignment = horizontalAlignment
-        }
-    }
-    onExplicitHorizontalAlignmentChanged: {
-        if (explicitHorizontalAlignment) {
-            textEdit.horizontalAlignment = horizontalAlignment
-        } else {
-            textEdit.horizontalAlignment = undefined
-        }
-    }
 
     _editor: textEdit
 
@@ -95,7 +80,7 @@ TextBase {
         wrapMode: TextEdit.Wrap
 
         // Note: need to disable if textFormat is ever allowed to be more than TextEdit.PlainText
-        PreeditText {
+        Text {
             id: preeditText
         }
     }

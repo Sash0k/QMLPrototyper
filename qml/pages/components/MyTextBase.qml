@@ -91,10 +91,8 @@ With labelVisible: false
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
-import Sailfish.Silica.private 1.0
-import "TextAutoScroller.js" as TextAutoScroller
 
-TextBaseItem {
+Item {
     id: textBase
 
     property alias label: labelItem.text
@@ -113,7 +111,7 @@ TextBaseItem {
     property int selectionMode: TextInput.SelectCharacters
     property alias font: placeholderTextLabel.font
     property int focusOutBehavior: FocusBehavior.ClearItemFocus
-    property bool autoScrollEnabled: true
+    property bool autoScrollEnabled: false
     property Component background: Separator {
         x: textLeftMargin
         anchors {
@@ -165,22 +163,6 @@ TextBaseItem {
         return rect;
     }
 
-    onHorizontalAlignmentChanged: {
-        if (explicitHorizontalAlignment) {
-            placeholderTextLabel.horizontalAlignment = horizontalAlignment
-            labelItem.horizontalAlignment = horizontalAlignment
-        }
-    }
-    onExplicitHorizontalAlignmentChanged: {
-        if (explicitHorizontalAlignment) {
-            placeholderTextLabel.horizontalAlignment = horizontalAlignment
-            labelItem.horizontalAlignment = horizontalAlignment
-        } else {
-            placeholderTextLabel.horizontalAlignment = undefined
-            labelItem.horizontalAlignment = undefined
-        }
-    }
-
     function _updateBackground() {
         if (_backgroundItem) {
             _backgroundItem.destroy()
@@ -193,11 +175,7 @@ TextBaseItem {
     }
 
     function _updateFlickables() {
-        if (autoScrollEnabled) {
-            TextAutoScroller.autoScroller.updateFlickables()
-        } else {
-            TextAutoScroller.autoScroller.editor = null
-        }
+        // TextAutoScroller удален
     }
 
     signal clicked(variant mouse)
@@ -628,9 +606,6 @@ TextBaseItem {
         target: _editor
         onActiveFocusChanged: {
             if (_editor.activeFocus) {
-                if (textBase.autoScrollEnabled) {
-                    TextAutoScroller.create(_editor)
-                }
                 if (textBase.softwareInputPanelEnabled) {
                     Qt.inputMethod.show()
                 }
