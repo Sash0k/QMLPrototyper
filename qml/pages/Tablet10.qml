@@ -4,6 +4,8 @@ import QtQuick.Window 2.2
 import Sailfish.Pickers 1.0
 import ru.mastercond.QmlPrototyper 1.0
 
+import "components"
+
 Page { 
 id: mypage
 allowedOrientations: Orientation.Landscape
@@ -263,7 +265,7 @@ y:-8
 }
 }
 
-TextArea {
+MyTextArea {
 id:codearea
 visible: false
 label: "QML код"
