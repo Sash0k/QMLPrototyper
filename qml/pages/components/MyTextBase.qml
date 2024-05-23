@@ -111,7 +111,7 @@ Item {
     property int selectionMode: TextInput.SelectCharacters
     property alias font: placeholderTextLabel.font
     property int focusOutBehavior: FocusBehavior.ClearItemFocus
-    property bool autoScrollEnabled: false
+    readonly property bool autoScrollEnabled: false
     property Component background: Separator {
         x: textLeftMargin
         anchors {
