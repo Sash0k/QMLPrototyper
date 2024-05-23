@@ -103,6 +103,7 @@ int main(int argc, char *argv[])
     //endregion
 
     qmlRegisterType<Prototyper>("ru.mastercond.QmlPrototyper", 1, 0, "Prototyper");
+    qmlRegisterType<SyntaxHighlighter>("SyntaxHighlighter", 1, 1, "SyntaxHighlighter");
 
     QScopedPointer<QGuiApplication> application(Aurora::Application::application(argc, argv));
     application->setOrganizationName(QStringLiteral("ru.mastercond"));
@@ -110,29 +111,7 @@ int main(int argc, char *argv[])
 
     QScopedPointer<QQuickView> view(Aurora::Application::createView());
     view->clearBeforeRendering();
-
-    //СЕКЦИЯ ПОЛУЧЕНИЯ РАЗМЕРА ДИАГОНАЛИ ЭКРАНА УСТРОЙСТВА АВРОРА (после определения QGuiApplication)
-
-    QScreen *screen=QGuiApplication::primaryScreen();
-    qreal devicescreen_height=screen->physicalSize().rheight();
-    qreal devicescreen_width=screen->physicalSize().rwidth();
-    qreal screen_diagonal=qSqrt(devicescreen_height*devicescreen_height+devicescreen_width*devicescreen_width)/25.4; //размер диагонали экрана в дюймах
-
-    qDebug() << "Физический размер экрана устройства: "+QString::number(screen_diagonal); //для R570E получилось 5.51097
-
-    //КОНЕЦ СЕКЦИИ ПОЛУЧЕНИЯ РАЗМЕРА ДИАГОНАЛИ ЭКРАНА УСТРОЙСТВА АВРОРА
-
-    qmlRegisterType<SyntaxHighlighter>("SyntaxHighlighter", 1, 1, "SyntaxHighlighter");
-
-
-    if (screen_diagonal<7) {
     view->setSource(Aurora::Application::pathTo(QStringLiteral("qml/QmlPrototyper.qml")));
-    }
-    else
-    {
-         view->setSource(Aurora::Application::pathTo(QStringLiteral("qml/QmlPrototyper_tablet10.qml")));
-    }
-
     view->show();
     return application->exec();
 }

@@ -270,7 +270,7 @@ id:codearea
 visible: false
 label: "QML код"
 placeholderText: "QML код"
-color: Theme.primaryColor
+//color: Theme.primaryColor
 font.pixelSize: Theme.fontSizeSmall
 width:parent.width
 height: rectangle2.height-row1.height-2*Theme.paddingLarge

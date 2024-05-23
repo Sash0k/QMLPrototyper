@@ -40,7 +40,7 @@ import Sailfish.Silica 1.0
 
 ApplicationWindow {
     objectName: "applicationWindow"
-    initialPage: Qt.resolvedUrl("pages/QMLEditPage.qml")
+    initialPage: Qt.resolvedUrl(Screen.sizeCategory >= Screen.Large ? "pages/Tablet10.qml" : "pages/QMLEditPage.qml")
     cover: Qt.resolvedUrl("cover/DefaultCoverPage.qml")
     allowedOrientations: Orientation.All
     _defaultPageOrientations:Orientation.All
