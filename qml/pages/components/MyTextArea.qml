@@ -50,12 +50,30 @@ MyTextBase {
     property alias selectedText: textEdit.selectedText
     property alias selectionStart: textEdit.selectionStart
     property alias selectionEnd: textEdit.selectionEnd
-
     _editor: textEdit
 
     onReadOnlyChanged: _updateBackground()
 
     _flickableDirection: Flickable.VerticalFlick
+
+    Column {
+        id: lineNumbers
+        spacing: isPortrait ? 1 : 0
+        y: textEdit.y
+        height: textEdit.height
+        width: textEdit.font.pixelSize * 1.8
+        z:textEdit.z + 1
+
+        Repeater {
+            model: textEdit.lineCount
+            delegate: Text {
+                horizontalAlignment: Text.AlignRight
+                color: Theme.secondaryColor
+                font.pixelSize: textEdit.font.pixelSize
+                text: index + 1
+            }
+        }
+    }
 
     TextEdit {
         id: textEdit
@@ -64,7 +82,7 @@ MyTextBase {
         property alias _preeditText: preeditText // for TextAutoScroller
         onHorizontalAlignmentChanged: textArea.setImplicitHorizontalAlignment(horizontalAlignment)
 
-        x: -parent.contentX
+        x: -parent.contentX + lineNumbers.width
         y: -parent.contentY
         width: textArea.width - Theme.paddingSmall - textArea.textLeftMargin - textArea.textRightMargin
         focus: true
