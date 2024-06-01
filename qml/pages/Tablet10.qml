@@ -11,6 +11,10 @@ id: mypage
 allowedOrientations: Orientation.Landscape
 backgroundColor: Theme.overlayBackgroundColor
 
+// адаптация для светлых и темных атмосфер
+readonly property string colorPanel: Theme.colorScheme == Theme.DarkOnLight ? "#DDDDDD" : "#101010"
+readonly property string colorGradient: Theme.colorScheme == Theme.DarkOnLight ? "#EEEEEE" : "#222222"
+
 property string selectedQMLFile
 
 Prototyper {id: prototyper}
@@ -69,8 +73,8 @@ id:rectangle1
 width: mypage.width/7
 height: mypage.height
 gradient: Gradient {
-        GradientStop { position: 0.0; color: "#EEEEEE" }
-        GradientStop { position: 1.0; color: "#DDDDDD" }
+        GradientStop { position: 0.0; color: colorGradient }
+        GradientStop { position: 1.0; color: colorPanel }
 }
 
 Column {
@@ -217,7 +221,7 @@ onClicked:
 
 Rectangle {
 id:rectangle2
-color: "#FFFFFE"
+color: Theme.overlayBackgroundColor
 width: mypage.width-mypage.width/5-mypage.width/7
 height: mypage.height
 x: mypage.width/7
@@ -270,7 +274,6 @@ id:codearea
 visible: false
 label: "QML код"
 placeholderText: "QML код"
-//color: Theme.primaryColor
 font.pixelSize: Theme.fontSizeSmall
 width:parent.width
 height: rectangle2.height-row1.height-2*Theme.paddingLarge
@@ -284,7 +287,7 @@ y: label2.y+label2.height+Theme.paddingLarge
 
 Rectangle {
 id:rectangleup3
-color: "#DDDDDD"
+color: colorPanel
 width: mypage.width
 height: label56.height+1.5*Theme.paddingLarge 
 z:1
@@ -293,13 +296,13 @@ opacity:0.3
 
 Rectangle {
 id:rectangle3
-//color: "#DDDDDD"
+color: colorPanel
 width: mypage.width/5
 height: mypage.height
 x: mypage.width*4/5
 gradient: Gradient {
-        GradientStop { position: 0.0; color: "#EEEEEE" }
-        GradientStop { position: 1.0; color: "#DDDDDD" }
+        GradientStop { position: 0.0; color: colorGradient }
+        GradientStop { position: 1.0; color: colorPanel }
 }
 
 Column {
